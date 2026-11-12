@@ -12,7 +12,7 @@ import pytest
 from repositorio import RepositorioSQLite
 from servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
 from tests.dobles import RelojFijo, RepositorioEnMemoria
-from validador import ValidadorDeAvistamiento
+from dominio.validador import ValidadorDeAvistamiento
 
 VALIDO = {
     "especie": "colibrí",

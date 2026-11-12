@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from repositorio import RepositorioSQLite
 from servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
-from validador import RelojSistema, ValidadorDeAvistamiento
+from dominio.validador import RelojSistema, ValidadorDeAvistamiento
 
 
 class AvistamientoIn(BaseModel):

@@ -3,7 +3,7 @@ from datetime import date
 import pytest
 
 from tests.dobles import RelojFijo
-from validador import ValidadorDeAvistamiento
+from dominio.validador import ValidadorDeAvistamiento
 
 HOY = date(2026, 10, 21)
 

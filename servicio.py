@@ -1,5 +1,5 @@
 """Capa de servicio: coordina validador y repositorio (sin saber nada de HTTP)."""
-from validador import ErrorDeCampo, ValidadorDeAvistamiento
+from dominio.validador import ErrorDeCampo, ValidadorDeAvistamiento
 
 
 class AvistamientoInvalido(Exception):
