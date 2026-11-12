@@ -10,7 +10,7 @@ from unittest.mock import Mock
 import pytest
 
 from repositorio import RepositorioSQLite
-from servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
+from aplicacion.servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
 from tests.dobles import RelojFijo, RepositorioEnMemoria
 from dominio.validador import ValidadorDeAvistamiento
 

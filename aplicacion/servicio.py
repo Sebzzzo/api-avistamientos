@@ -1,4 +1,4 @@
-"""Capa de servicio: coordina validador y repositorio (sin saber nada de HTTP)."""
+from aplicacion.puertos import RepositorioAvistamientos
 from dominio.validador import ErrorDeCampo, ValidadorDeAvistamiento
 
 
@@ -13,7 +13,7 @@ class AvistamientoNoEncontrado(Exception):
 
 
 class ServicioAvistamientos:
-    def __init__(self, repositorio, validador: ValidadorDeAvistamiento):
+    def __init__(self, repositorio: RepositorioAvistamientos, validador: ValidadorDeAvistamiento):
         self._repo = repositorio
         self._validador = validador
 

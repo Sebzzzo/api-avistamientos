@@ -6,7 +6,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field
 
 from repositorio import RepositorioSQLite
-from servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
+from aplicacion.servicio import AvistamientoInvalido, AvistamientoNoEncontrado, ServicioAvistamientos
 from dominio.validador import RelojSistema, ValidadorDeAvistamiento
 
 
