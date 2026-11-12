@@ -9,7 +9,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from main import crear_app
-from repositorio import RepositorioSQLite
+from adaptadores.salida.repositorio_sqlite import RepositorioSQLite
 from tests.dobles import RelojFijo
 
 VALIDO = {
