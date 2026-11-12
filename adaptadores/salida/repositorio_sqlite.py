@@ -1,4 +1,4 @@
-"""Acceso a datos: todo el SQL vive aquí."""
+
 import sqlite3
 from contextlib import contextmanager
 
