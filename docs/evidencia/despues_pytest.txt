@@ -1,0 +1,74 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\aulainformatica\Downloads\api-avistamientos\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\aulainformatica\Downloads\api-avistamientos
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0, cov-7.1.0
+collecting ... collected 57 items
+
+tests/test_api.py::test_listar_sin_datos_responde_200_y_lista_vacia PASSED [  1%]
+tests/test_api.py::test_listar_devuelve_todos_los_avistamientos_en_orden_de_registro PASSED [  3%]
+tests/test_api.py::test_obtener_existente_responde_200_con_todos_los_campos PASSED [  5%]
+tests/test_api.py::test_obtener_inexistente_responde_404_con_mensaje PASSED [  7%]
+tests/test_api.py::test_obtener_con_id_que_no_es_numero_responde_404 PASSED [  8%]
+tests/test_api.py::test_crear_valido_responde_201_con_id_asignado_y_queda_guardado PASSED [ 10%]
+tests/test_api.py::test_crear_con_campos_faltantes_responde_400_y_no_guarda PASSED [ 12%]
+tests/test_api.py::test_crear_con_especie_muy_corta_responde_400_nombrando_el_campo_y_no_guarda PASSED [ 14%]
+tests/test_api.py::test_crear_con_fecha_de_manana_responde_400 PASSED    [ 15%]
+tests/test_api.py::test_crear_con_json_malformado_responde_400 PASSED    [ 17%]
+tests/test_api.py::test_crear_con_tipo_de_dato_incorrecto_responde_400 PASSED [ 19%]
+tests/test_api.py::test_actualizar_existente_responde_200_y_el_cambio_persiste PASSED [ 21%]
+tests/test_api.py::test_actualizar_inexistente_responde_404 PASSED       [ 22%]
+tests/test_api.py::test_actualizar_con_datos_invalidos_responde_400_y_no_modifica_el_original PASSED [ 24%]
+tests/test_api.py::test_actualizar_con_campos_faltantes_responde_400 PASSED [ 26%]
+tests/test_api.py::test_eliminar_existente_responde_204_y_luego_el_id_da_404 PASSED [ 28%]
+tests/test_api.py::test_eliminar_borra_solo_el_avistamiento_indicado PASSED [ 29%]
+tests/test_api.py::test_eliminar_inexistente_responde_404 PASSED         [ 31%]
+tests/test_api.py::test_resumen_cuenta_avistamientos_por_especie PASSED  [ 33%]
+tests/test_api.py::test_resumen_sin_datos_responde_200_y_lista_vacia PASSED [ 35%]
+tests/test_servicio.py::test_crear_con_datos_validos_guarda_y_devuelve_el_avistamiento_con_id PASSED [ 36%]
+tests/test_servicio.py::test_crear_con_datos_invalidos_lanza_error_con_el_campo_y_no_guarda PASSED [ 38%]
+tests/test_servicio.py::test_crear_con_datos_invalidos_nunca_llama_al_repositorio PASSED [ 40%]
+tests/test_servicio.py::test_crear_con_datos_validos_llama_al_repositorio_una_sola_vez PASSED [ 42%]
+tests/test_servicio.py::test_obtener_un_id_inexistente_lanza_no_encontrado PASSED [ 43%]
+tests/test_servicio.py::test_actualizar_un_avistamiento_existente_cambia_sus_datos PASSED [ 45%]
+tests/test_servicio.py::test_actualizar_con_datos_invalidos_lanza_error_y_no_modifica_el_original PASSED [ 47%]
+tests/test_servicio.py::test_actualizar_un_id_inexistente_lanza_no_encontrado PASSED [ 49%]
+tests/test_servicio.py::test_eliminar_un_avistamiento_existente_lo_quita_del_repositorio PASSED [ 50%]
+tests/test_servicio.py::test_eliminar_un_id_inexistente_lanza_no_encontrado PASSED [ 52%]
+tests/test_validador.py::test_avistamiento_con_todos_los_datos_validos_no_tiene_errores PASSED [ 54%]
+tests/test_validador.py::test_especie_de_2_caracteres_es_rechazada PASSED [ 56%]
+tests/test_validador.py::test_especie_de_3_caracteres_es_aceptada PASSED [ 57%]
+tests/test_validador.py::test_especie_de_50_caracteres_es_aceptada PASSED [ 59%]
+tests/test_validador.py::test_especie_de_51_caracteres_es_rechazada PASSED [ 61%]
+tests/test_validador.py::test_especie_vacia_o_solo_espacios_es_rechazada[vacia] PASSED [ 63%]
+tests/test_validador.py::test_especie_vacia_o_solo_espacios_es_rechazada[solo_espacios] PASSED [ 64%]
+tests/test_validador.py::test_espacios_alrededor_de_la_especie_no_cuentan_como_caracteres PASSED [ 66%]
+tests/test_validador.py::test_fecha_de_hoy_es_aceptada PASSED            [ 68%]
+tests/test_validador.py::test_fecha_de_manana_es_rechazada PASSED        [ 70%]
+tests/test_validador.py::test_fecha_de_ayer_es_aceptada PASSED           [ 71%]
+tests/test_validador.py::test_fecha_con_formato_distinto_de_aaaa_mm_dd_es_rechazada[con_barras] PASSED [ 73%]
+tests/test_validador.py::test_fecha_con_formato_distinto_de_aaaa_mm_dd_es_rechazada[sin_cero] PASSED [ 75%]
+tests/test_validador.py::test_fecha_con_formato_distinto_de_aaaa_mm_dd_es_rechazada[sin_guiones] PASSED [ 77%]
+tests/test_validador.py::test_fecha_con_formato_distinto_de_aaaa_mm_dd_es_rechazada[vacia] PASSED [ 78%]
+tests/test_validador.py::test_fecha_con_formato_distinto_de_aaaa_mm_dd_es_rechazada[texto] PASSED [ 80%]
+tests/test_validador.py::test_fecha_con_formato_correcto_pero_inexistente_es_rechazada[30_de_febrero] PASSED [ 82%]
+tests/test_validador.py::test_fecha_con_formato_correcto_pero_inexistente_es_rechazada[29_feb_a\xf1o_no_bisiesto] PASSED [ 84%]
+tests/test_validador.py::test_fecha_con_formato_correcto_pero_inexistente_es_rechazada[mes_13] PASSED [ 85%]
+tests/test_validador.py::test_fecha_con_formato_correcto_pero_inexistente_es_rechazada[mes_0] PASSED [ 87%]
+tests/test_validador.py::test_29_de_febrero_de_un_a±o_bisiesto_es_aceptado PASSED [ 89%]
+tests/test_validador.py::test_lugar_u_observador_vacio_es_rechazado[vacio-lugar] PASSED [ 91%]
+tests/test_validador.py::test_lugar_u_observador_vacio_es_rechazado[vacio-observador] PASSED [ 92%]
+tests/test_validador.py::test_lugar_u_observador_vacio_es_rechazado[solo_espacios-lugar] PASSED [ 94%]
+tests/test_validador.py::test_lugar_u_observador_vacio_es_rechazado[solo_espacios-observador] PASSED [ 96%]
+tests/test_validador.py::test_el_mensaje_de_error_nombra_el_campo_que_fallo PASSED [ 98%]
+tests/test_validador.py::test_con_varios_campos_invalidos_se_reportan_todos PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\aulainformatica\Downloads\api-avistamientos\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 57 passed, 1 warning in 1.71s ========================

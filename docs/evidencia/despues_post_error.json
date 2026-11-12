@@ -1,0 +1,1 @@
+﻿{"detail":"Datos inv├ílidos","errores":[{"campo":"especie","error":"La especie debe tener entre 3 y 50 caracteres (tiene 2)"},{"campo":"lugar","error":"El campo lugar no puede estar vac├¡o"},{"campo":"fecha","error":"La fecha no puede ser posterior a hoy"},{"campo":"observador","error":"El campo observador no puede estar vac├¡o"}]}
