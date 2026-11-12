@@ -13,12 +13,6 @@ class Reloj(Protocol):
     def hoy(self) -> date: ...
 
 
-class RelojSistema:
-
-    def hoy(self) -> date:
-        return date.today()
-
-
 @dataclass(frozen=True)
 class ErrorDeCampo:
     campo: str
